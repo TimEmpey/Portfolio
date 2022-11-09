@@ -3,9 +3,10 @@ body {
 }
 
 img {
-  width: 1px;
-  height: 1px;
+  width: 250px;
+  height: 160px;
   background-color: black;
+  border-radius: 360px;
 }
 
 .fade {
@@ -14,17 +15,8 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  background: url('../../src/images/Valley_Painting.png') no-repeat center center fixed;
+  background: url('../images/placeholder.jpeg') no-repeat center center fixed;
   background-size: cover;
-}
-
-.name {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* position: absolute; */
 }
 
 .zoom {
@@ -41,7 +33,7 @@ img {
   position: absolute;
   height: 200vh;
   width: 100%;
-  background: rgb(105, 105, 105);
-  color: white;
+  background: linear-gradient(#ffffff, #466CB3);
+  color: black;
   overflow-x: auto;
 }
