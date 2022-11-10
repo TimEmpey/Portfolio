@@ -1,0 +1,31 @@
+.fade {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url('../images/placeholder.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.zoom {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.afterzoom {
+  position: absolute;
+  /* was causing double scroll bar */
+  /* height: 200vh;  */
+  width: 100%;
+  background: linear-gradient(#ffffff, #466CB3);
+  color: black;
+  overflow-x: auto;
+  /* scroll-behavior: smooth;
+  overflow-y: scroll; */
+}

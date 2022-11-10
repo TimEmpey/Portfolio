@@ -1,4 +1,6 @@
 import './css/styles.css';
+import './css/fade.css';
+import './css/navbar.css';
 
 const zoomElement = document.querySelector('.zoom')
 const fadeElement = document.querySelector('.fade')
@@ -68,3 +70,16 @@ zoomElement.style.opacity = 1
 
 // Positions the afterZoom element right below the zoomed image
 afterZoomElement.style.top = absoluteVar + imageVar_heightVar_MAX / 2 + heightVar / 2 + 'px'
+
+//! ========================== FUNCTIONAL STYLING =================================
+
+const element = document.querySelector("#projectsContent");
+
+element.addEventListener('wheel', (event) => {
+    event.preventDefault();
+
+    element.scrollBy({
+        left: event.deltaY < 0 ? -30 : 30,
+    
+    });
+});
