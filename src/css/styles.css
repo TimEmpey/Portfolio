@@ -10,8 +10,17 @@ font-family: 'Press Start 2P', cursive;
 font-family: 'Rubik Mono One', sans-serif;
 */
 
+html, body, section {
+  block-size: 100%;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
 body {
   margin: 0;
+  overflow: scroll;
 }
 
 img {
@@ -21,6 +30,22 @@ img {
   border-radius: 360px;
 }
 
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#filler{
+  height: 100%;
+  background: white;
+}
+
+#projects{
+  background: linear-gradient(#ffffff, #8796af);
+}
 .projects h2 {
   text-align: center;
   font-size: 5rem;
@@ -28,9 +53,9 @@ img {
 }
 #projectsContent {
   display: flex;
-  overflow-x: scroll;
   max-width: 50rem;
   margin: 0 auto;
+  overflow-x: hidden; 
   /* background-color: #a0b5dc; */
   /* border-radius: 8px; */
 }
@@ -39,6 +64,18 @@ img {
   border-radius: 8px;
   padding: 6rem 9rem;
   margin: 1rem 3rem;
+}
+
+#about {
+  background: linear-gradient(#8796af, #6d83ad);
+}
+
+#achievements {
+  background: linear-gradient(#6d83ad, #5574ac);
+}
+
+#contact{
+  background: linear-gradient(#5574ac, #466CB3);
 }
 
 /* ------- PLACEHOLDER ---------- */
@@ -54,3 +91,6 @@ p {
   width: 95%;
 }
 /*---------------------------------*/
+
+
+
