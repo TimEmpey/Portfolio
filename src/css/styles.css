@@ -1,14 +1,27 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Be+Vietnam+Pro&family=Cinzel&family=Press+Start+2P&family=Rubik+Mono+One&display=swap');
+
+/*
+font-family: 'Alegreya', serif;
+font-family: 'Be Vietnam Pro', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Rubik Mono One', sans-serif;
+*/
+
 body {
   margin: 0;
 }
 
 img {
-  width: 250px;
-  height: 160px;
+  width: 150px;
+  height: 100px;
   background-color: black;
   border-radius: 360px;
 }
 
+/* ---------Fade Effect---------- */
 .fade {
   height: 100vh;
   width: 100%;
@@ -31,9 +44,62 @@ img {
 
 .afterzoom {
   position: absolute;
-  height: 200vh;
+  /* height: 200vh; was causing double scroll bar */
   width: 100%;
   background: linear-gradient(#ffffff, #466CB3);
   color: black;
   overflow-x: auto;
+}
+/* ------------------------------ */
+
+.projects h2 {
+  text-align: center;
+  font-size: 6rem;
+  font-family: 'Cinzel', serif;
+}
+
+.projects p {
+  font-size: 2rem;
+  font-family: 'Be Vietnam Pro', serif;
+  background-color: rgb(210, 216, 255);
+  width: 95%;
+}
+
+/* ------- PLACEHOLDER ---------- */
+h2 {
+  text-align: center;
+  font-size: 6rem;
+  font-family: 'Cinzel', serif;
+}
+p {
+  font-size: 2rem;
+  font-family: 'Be Vietnam Pro', serif;
+  background-color: rgb(210, 216, 255);
+  width: 95%;
+}
+/*---------------------------------*/
+
+.navbar {
+  font-family: 'Be Vietnam Pro', serif;
+  overflow: hidden;
+  background-color: #212E5B;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
 }
