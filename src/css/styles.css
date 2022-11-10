@@ -21,55 +21,31 @@ img {
   border-radius: 360px;
 }
 
-/* ---------Fade Effect---------- */
-.fade {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: url('../images/placeholder.jpeg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-.zoom {
-  height: 100vh;
-  width: 100%;
-  display: grid;
-  place-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.afterzoom {
-  position: absolute;
-  /* height: 200vh; was causing double scroll bar */
-  width: 100%;
-  background: linear-gradient(#ffffff, #466CB3);
-  color: black;
-  overflow-x: auto;
-}
-/* ------------------------------ */
-
 .projects h2 {
   text-align: center;
-  font-size: 6rem;
-  font-family: 'Cinzel', serif;
+  font-size: 5rem;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
-
+#projectsContent {
+  display: flex;
+  overflow-x: scroll;
+  max-width: 50rem;
+  margin: 0 auto;
+  /* background-color: #a0b5dc; */
+  /* border-radius: 8px; */
+}
 .projects p {
-  font-size: 2rem;
-  font-family: 'Be Vietnam Pro', serif;
-  background-color: rgb(210, 216, 255);
-  width: 95%;
+  font-family: sans-serif;
+  border-radius: 8px;
+  padding: 6rem 9rem;
+  margin: 1rem 3rem;
 }
 
 /* ------- PLACEHOLDER ---------- */
 h2 {
   text-align: center;
-  font-size: 6rem;
-  font-family: 'Cinzel', serif;
+  font-size: 5rem;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
 p {
   font-size: 2rem;
@@ -78,28 +54,3 @@ p {
   width: 95%;
 }
 /*---------------------------------*/
-
-.navbar {
-  font-family: 'Be Vietnam Pro', serif;
-  overflow: hidden;
-  background-color: #212E5B;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.navbar a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
