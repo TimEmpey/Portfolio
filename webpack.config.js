@@ -17,9 +17,12 @@ module.exports = {
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'TEMPLATE',
+      filename: 'index.html',
       template: './src/index.html',
-      inject: 'body'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'portfolio',
+      template: './src/html/portfolio.html',
     })
   ],
   module: {

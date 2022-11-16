@@ -1,0 +1,127 @@
+.fade {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url('../images/placeholder.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+.zoom {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.afterzoom {
+  position: absolute;
+  /* height: 200vh;  */
+  width: 100%;
+  background-color: lightslategray;
+  color: black;
+  overflow-x: auto;
+}
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Be+Vietnam+Pro&family=Cinzel&family=Press+Start+2P&family=Rubik+Mono+One&display=swap');
+
+/*
+font-family: 'Alegreya', serif;
+font-family: 'Be Vietnam Pro', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Rubik Mono One', sans-serif;
+*/
+
+html, body, section {
+  block-size: 100%;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  overflow: scroll;
+  z-index: 0;
+}
+
+#name {
+  width: 150px;
+  height: 100px;
+  background-color: black;
+  border-radius: 360px;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#filler{
+  height: 100%;
+  background:white;
+}
+
+#filler2{
+  height: 50%;
+  background:linear-gradient(#ffffff, #D2D3D0);
+}
+
+#landing{
+  background-color: #D2D3D0;
+  background-image: url(../images/portrait-2.jpg);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  border-top: 5px solid #b0b0b0;
+  border-bottom: 5px solid #b0b0b0;
+  z-index: 1;
+}
+#landing h2{
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  z-index: 1;
+  color:rgb(69, 75, 116);
+}
+a{
+  display: block;
+  color:rgb(69, 75, 116);
+  text-decoration: none;
+  position: relative;
+}
+a::after{
+  content: "";
+  background: white;
+	mix-blend-mode: exclusion;
+  width: calc(100% + 20px);
+  height: 0;
+  position: absolute;
+  bottom: -4px;
+  left: -10px;
+	transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  box-shadow: 3px 3px rgb(0, 0, 0);
+}
+a:hover::after{
+	height: calc(100% + 8px)
+}
+
+#landing p{
+  font-size: 2rem;
+  font-family: 'Be Vietnam Pro', serif;
+  background-color: rgb(210, 216, 255);
+  width: 95%;
+}
+
+#quote{
+  background-color: #D3D4D0;
+}

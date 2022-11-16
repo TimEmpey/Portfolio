@@ -7,101 +7,47 @@
 <body>
 <!-----------------Nav Bar--------------------->
     <div class="navbar">
-        <a href="#contact">Contact</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <!-- <a href="#intro">Intro</a> -->
+        <a href="#quote">Quotes</a>
+        <a href="./portfolio.html">Portfolio</a>
+        <a href="#intro">Intro</a>
     </div>
 <!---------------------------------------------->
     <section id="intro"><br>
         <div class="fade">
         </div>
         <div class="zoom">
-            <img src="./images/name-logo.jpg">
+            <img id="name" src="./images/name-logo.jpg">
         </div>  
     </section>
 
-    <!-- <div class="afterzoom" id="flexContainer"> -->
+    <div id="filler">
+    </div>
+    <div id="filler2">
+    </div>
 
-        <!-- <section class="projects" id="projects"><br>
-            <h2>Projects</h2>
-            <div id="projectsContent">
-            <p>Galactic Age</p>
-            <p>Virtual Tamagotchi</p>
-            <p>Mock Hair Salon</p>
-            <p>TDL Eternal</p>                
-            </div>
+    
+        <section class="landing" id="landing">
+            <h2><a href="./portfolio" target="_blank">Portfolio</a></h2> 
         </section>
-
-        <section class="about" id="about"><br>
-            <h2>About</h2>
-            <ul>
-                <p>Piano Maybe?</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-            </ul>
-        </section>
-
-        <section class="achievements" id="achievements"><br>
-            <h2>Achievements</h2>
-            <ul>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-            </ul>
-        </section>
-
-        <section class="contact" id="contact"><br>
-            <h2>Contact</h2>
-            <ul>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet</p>
-            </ul>
-        </section> -->
-    <!-- </div> -->
-<!---------------------------------------------->
-
-    <section id="filler">
-    </section>
-    <section class="projects" id="projects">
-        <h2>Projects</h2>
-        <div id="projectsContent">
-            <p>Galactic Age</p>
-            <p>Virtual Tamagotchi</p>
-            <p>Mock Hair Salon</p>
-            <p>TDL Eternal</p>                
-        </div>
-    </section>
-    <section class="about" id="about">
-        <h2>About</h2>
-        <ul>
-            <p>Piano Maybe?</p>
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet</p>
-        </ul>
-    </section>
-    <section class="achievements" id="achievements"><br>
-        <h2>Achievements</h2>
-        <ul>
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet</p>
-        </ul>
-    </section>
-    <section class="contact" id="contact"><br>
-        <h2>Contact</h2>
-        <ul>
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>Lorem ipsum dolor sit amet</p>
-        </ul>
+    
+    <section class="quote" id="quote"><br>
+        <h2>
+        <script>
+            var quoteArray = new Array();
+            quoteArray[0] = 'When you reach the end of your rope, tie a knot in it and hang on -Franklin D. Roosevelt';
+            quoteArray[1] = 'It is during our darkest moments that we must focus to see the light -Aristotle';
+            quoteArray[2] = 'Whoever is happy will make others happy too -Anne Frank';
+            quoteArray[3] = 'In the end, it`s not the years in your life that count. It1s the life in your years -Abraham Lincoln';
+            quoteArray[4] = 'You will face many defeats in life, but never let yourself be defeated -Maya Angelou';
+            quoteArray[5] = 'Only a life lived for others is a life worthwhile -Albert Einstein';
+            quoteArray[6] = 'Live in the sunshine, swim the sea, drink the wild air -Ralph Waldo Emerson';
+            quoteArray[7] = 'Love the life you live. Live the life you love -Bob Marley';
+            quoteArray[8] = 'You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose -Dr. Seuss';
+            quoteArray[9] = 'Success usually comes to those who are too busy to be looking for it -Henry David Thoreau';
+            var i = Math.floor(10*Math.random());
+            // document.write(quoteArray[i]);
+            document.write('<span style="font-weight: lighter;">' + quoteArray[i] + '</span>');
+        </script>
+        </h2>
     </section>
 </body>
