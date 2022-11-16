@@ -2,6 +2,16 @@ import './css/navbar.css';
 import './css/index.css';
 import './css/portfolio.css';
 
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader-hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild("loader");
+  });
+});
+
 const zoomElement = document.querySelector('.zoom');
 const fadeElement = document.querySelector('.fade');
 const afterZoomElement = document.querySelector('.afterzoom');
@@ -70,16 +80,3 @@ zoomElement.style.opacity = 1;
 
 // Positions the afterZoom element right below the zoomed image
 afterZoomElement.style.top = absoluteVar + imageVar_heightVar_MAX / 2 + heightVar / 2 + 'px';
-
-//! ========================== Post Zoom Styling =================================
-
-//Side Scroll ---------------------------------------------------------------------------------
-const element = document.querySelector("#projectsContent");
-
-element.addEventListener('wheel', (event) => {
-  event.preventDefault();
-
-  element.scrollBy({
-    left: event.deltaY < 0 ? -30 : 30,
-  });
-});
