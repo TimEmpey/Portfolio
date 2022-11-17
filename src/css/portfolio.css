@@ -1,0 +1,158 @@
+body .guts{
+    margin:0;
+    padding:0;
+    /* background: url('../images/placeholder.jpeg') no-repeat center center fixed;
+    background-size: cover; */
+    background-color: #212E5B;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10%;
+}
+
+.guts .navbar{
+    background-color: #0f1839;
+}
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* .object-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: none;
+    justify-content: center;
+} */
+
+.speed-1 {
+    transform: translateZ(-1px) scale(2);
+}
+.speed-2 {
+    transform: translateZ(-2px) scale(3);
+}
+.speed-3 {
+    transform: translateZ(-3px) scale(4);
+}
+.speed-4 {
+    transform: translateZ(-4px) scale(5);
+}
+.speed-5 {
+    transform: translateZ(-5px) scale(6);
+}
+.speed-6 {
+    transform: translateZ(-6px) scale(7);
+}
+
+.object {
+    margin-left: 250px;
+    height: 100px;
+    width: 300px;
+    border: 3px solid black;
+}
+.object-1 {
+    margin-top: -150px;
+    width: 30%;
+    height: auto;
+}
+.object-2 {
+    margin-top: 100px;
+    width: 45%;
+    height: auto;
+}
+.object-3 {
+    margin-top: -300px;;
+    width: 120%;
+    height: auto;
+}
+.object-4 {
+    margin-top: -90px;
+    width: 70%;
+    height: auto;
+}
+
+.page-content {
+    height: 6000px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.page-main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+.project-item {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-size: 5em;
+    /* padding: 60px 20px; */
+    font-weight: 700;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    cursor: pointer;
+    margin-left: 3rem;
+}
+.project-item-title {
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 0.01em white;
+    transition: -webkit-text-stroke 0.5s ease, color 0.5s ease;
+}
+.project-item:hover .project-item-title {
+    -webkit-text-stroke: none;
+    color: white;
+}
+.project-item-title::after {
+    content: attr(data-menu-item-text);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: 900;
+    -webkit-text-stroke: 0.012em white;
+    color: transparent;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.project-item-hover-image {
+    width: auto;
+    height: auto;
+    max-width: 900px;
+    /* max-width: 600px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 75%;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    /* This places the cursor in the center of the image. Divide the width and height by 2 to get the top and left offsets :) */
+    margin-left: 80%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+    border-radius: 10px;
+}
+.project-item:hover .project-item-hover-image {
+    opacity: 1;
+}
+.project-item:hover .project-item-title::after {
+    opacity: 1;
+    z-index: 3;
+}

@@ -59,7 +59,7 @@ body {
 }
 
 .fade-in-image{
-  animation: fadeIn 4s;
+  animation: fadeIn 3s;
 }
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -86,13 +86,9 @@ section {
 }
 
 #filler{
-  height: 160%;
+  height: 115%;
   background:white;
 }
-/* #filler2{
-  height: 90%;
-  background:linear-gradient(#ffffff, #D2D3D0);
-} */
 
 #portrait{
   background-color: #D2D3D0;
@@ -102,13 +98,13 @@ section {
   background-repeat: no-repeat;
   border-top: 5px solid #b0b0b0;
   border-bottom: 5px solid #b0b0b0;
-  z-index: 1;
+  z-index: 2;
 }
 #portrait h2{
   text-align: center;
   font-size: 5rem;
   font-family: 'Be Vietnam Pro', sans-serif;
-  z-index: 1;
+  z-index: 2;
   color:rgb(69, 75, 116);
 }
 #portrait a{
@@ -155,12 +151,10 @@ section {
   background-color: #495b74;
   transition: opacity 1s, visibility 1s;
 }
-
 .loader-hidden{
   opacity: 0;
   visibility: hidden;
 }
-
 .loader::after{
   content: "";
   width: 75px;
@@ -170,7 +164,6 @@ section {
   border-radius: 50%;
   animation: loading 1s ease infinite;
 }
-
 @keyframes loading{
   from{
     transform: rotate(0turn);

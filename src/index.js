@@ -26,7 +26,7 @@ const imageVar_heightVar_MAX = imageVar_heightVar * zoomVar_breakpointVar;
 const absoluteVar = zoomVar_breakpointVar * zoomVar_SPEED; // Absolute position, when the Element reached maximum size
 
 // Fade --------------------------------------------------------------------------------------
-const FADE_SPEED = 500; // Lower is faster
+const FADE_SPEED = 400; // Lower is faster
 let fade = 1;
 let prev = 0;
 // -------------------------------------------------------------------------------------- Fade
@@ -38,7 +38,7 @@ function anim() {
 
   // Only update the Elements scale, when we are below the breakpoint
   if (zoom < zoomVar_breakpointVar) {
-    // Only scale the Image, so the Zoom element does not mess with the document width
+// Only scale the Image, so the Zoom element does not mess with the document width
     imgElement.style.transform = `scale(${zoom})`;
     // Sets the Elements position to fixed, so it can resize without scrolling away
     zoomElement.style.top = '0px';
@@ -80,3 +80,16 @@ zoomElement.style.opacity = 1;
 
 // Positions the afterZoom element right below the zoomed image
 afterZoomElement.style.top = absoluteVar + imageVar_heightVar_MAX / 2 + heightVar / 2 + 'px';
+
+const menuItem = document.querySelector(".project-item");
+
+function followImageCursor(event, menuItem) {
+  const contentBox = menuItem.getBoundingClientRect();
+  const dx = event.pageX - contentBox.x;
+  const dy = event.pageY - contentBox.y;
+  menuItem.children[1].style.transform = `translate(${dx}px, ${dy}px)`;
+}
+
+menuItem.addEventListener("mousemove", (event) => {
+  setInterval(followImageCursor(event, menuItem), 1000);
+});
