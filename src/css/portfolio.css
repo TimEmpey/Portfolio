@@ -134,6 +134,7 @@
     color: rgb(206, 206, 206);
     position: absolute;
     margin-inline: 20%;
+    padding-bottom: 1000px;
 }
 #part1, #part2, #part3{
     transition: transform 0.75s
