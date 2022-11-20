@@ -1,4 +1,4 @@
-body .guts{
+#body{
     margin:0;
     padding:0;
     /* background: url('../images/placeholder.jpeg') no-repeat center center fixed;
@@ -9,6 +9,11 @@ body .guts{
     flex-direction: column;
     padding-bottom: 10%;
 }
+/* 
+.guts {
+    width: vw;
+    height: vh;
+} */
 
 .guts .navbar{
     background-color: #0f1839;
@@ -77,9 +82,9 @@ body .guts{
     height: auto;
 }
 
-.page-content {
-    height: 6000px;
-}
+/* .page-content {
+    position: relative
+} */
 
 .wrapper {
     display: flex;
@@ -88,20 +93,26 @@ body .guts{
 }
 .page-main {
     flex-grow: 1;
-    display: flex;
-    align-items: center;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
+.projects{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .project-item {
+    display: flex;
+    align-self: center;
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     font-size: 5em;
-    /* padding: 60px 20px; */
     font-weight: 700;
     width: 100vw;
-    height: 100vh;
     position: relative;
     cursor: pointer;
     margin-left: 3rem;
@@ -132,7 +143,7 @@ body .guts{
 .project-item-hover-image {
     width: auto;
     height: auto;
-    max-width: 900px;
+    max-width: 40rem;
     /* max-width: 600px; */
     position: absolute;
     top: 0;
@@ -143,7 +154,7 @@ body .guts{
     opacity: 0;
     transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
     /* This places the cursor in the center of the image. Divide the width and height by 2 to get the top and left offsets :) */
-    margin-left: 80%;
+    margin-left: 17%;
     overflow: hidden;
     pointer-events: none;
     z-index: 2;
@@ -155,4 +166,44 @@ body .guts{
 .project-item:hover .project-item-title::after {
     opacity: 1;
     z-index: 3;
+}
+
+.buffer{
+    height: 20vh
+}
+
+.about-me{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+}
+
+.about-me p{
+    font-size: 2rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: rgb(206, 206, 206);
+    position: absolute;
+    margin-inline: 20%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 100vw;
+    z-index: 3;
+}
+
+.contact{
+    background-color: #0F1839;
+    border-radius: 50px;
+    padding-inline: 15px;
+}
+
+.contact svg{
+    margin-inline: 5px;
+    margin-bottom: 7px;
 }
