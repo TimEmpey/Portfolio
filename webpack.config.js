@@ -22,7 +22,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'portfolio',
-      template: './src/html/portfolio.html',
+      template: 'timothyempey.com/portfolio',
     }),
     new HtmlWebpackPlugin({
       filename: 'contact',
