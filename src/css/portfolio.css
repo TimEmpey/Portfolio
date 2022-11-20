@@ -6,8 +6,7 @@
     background-color: #212E5B;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    padding-bottom: 10%;
+
 }
 /* 
 .guts {
@@ -98,11 +97,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 .projects{
-    height: 100vh;
+    height: 108vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    margin-top: -8%;
 }
 
 .project-item {
@@ -143,7 +143,7 @@
 .project-item-hover-image {
     width: auto;
     height: auto;
-    max-width: 40rem;
+    max-width: 50rem;
     /* max-width: 600px; */
     position: absolute;
     top: 0;
@@ -154,7 +154,7 @@
     opacity: 0;
     transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
     /* This places the cursor in the center of the image. Divide the width and height by 2 to get the top and left offsets :) */
-    margin-left: 17%;
+    margin-left: 40%;
     overflow: hidden;
     pointer-events: none;
     z-index: 2;
@@ -169,17 +169,28 @@
 }
 
 .buffer{
-    height: 20vh
+    height: 20vh;
+    width: 100vw;
 }
 
 .about-me{
     position: relative;
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-content: center;
 }
 
-.about-me p{
+#about-title{
+    margin-inline: 0;
+    margin-left: 60px;
+    font-size: 2rem;
+    color: #ffffff6a;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+}
+
+#summary{
     font-size: 2rem;
     font-family: 'Be Vietnam Pro', sans-serif;
     color: rgb(206, 206, 206);
