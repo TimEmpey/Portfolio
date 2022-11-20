@@ -21,8 +21,8 @@ module.exports = {
       template: './src/index.html',
     }),
     new HtmlWebpackPlugin({
-      filename: 'portfolio',
-      template: '/portfolio.html',
+      filename: 'portfolio/index.html',
+      template: './src/html/portfolio.html',
     }),
     new HtmlWebpackPlugin({
       filename: 'contact',
