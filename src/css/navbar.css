@@ -17,7 +17,7 @@ font-family: 'Rubik Mono One', sans-serif;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 .navbar a {
   float: right;
@@ -27,8 +27,32 @@ font-family: 'Rubik Mono One', sans-serif;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  transform: 0.75s
 }
 .navbar a:hover {
-  background: #ddd;
+  background: #B9AED6;
   color: black;
+  transform: scale(1.2);
+  /* border-radius: 50px; */
+}
+
+@media only screen and (orientation: portrait) {
+  .navbar {
+    font-family: 'Be Vietnam Pro', serif;
+    overflow: hidden;
+    background-color: #212E5B;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+  }
+  .navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 50px;
+    text-decoration: none;
+    font-size: 30px;
+  }
 }

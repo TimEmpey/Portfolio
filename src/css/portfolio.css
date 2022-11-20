@@ -1,89 +1,17 @@
 #body{
     margin:0;
     padding:0;
-    /* background: url('../images/placeholder.jpeg') no-repeat center center fixed;
-    background-size: cover; */
     background-color: #212E5B;
     min-height: 100vh;
-    display: flex;
-
+    max-width: 100vw;
 }
-/* 
-.guts {
-    width: vw;
-    height: vh;
-} */
 
-.guts .navbar{
+#body .navbar{
     background-color: #0f1839;
 }
-
-.parallax {
-    perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+#body .navbar a:hover {
+    background: #212E5B;
 }
-
-/* .object-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: none;
-    justify-content: center;
-} */
-
-.speed-1 {
-    transform: translateZ(-1px) scale(2);
-}
-.speed-2 {
-    transform: translateZ(-2px) scale(3);
-}
-.speed-3 {
-    transform: translateZ(-3px) scale(4);
-}
-.speed-4 {
-    transform: translateZ(-4px) scale(5);
-}
-.speed-5 {
-    transform: translateZ(-5px) scale(6);
-}
-.speed-6 {
-    transform: translateZ(-6px) scale(7);
-}
-
-.object {
-    margin-left: 250px;
-    height: 100px;
-    width: 300px;
-    border: 3px solid black;
-}
-.object-1 {
-    margin-top: -150px;
-    width: 30%;
-    height: auto;
-}
-.object-2 {
-    margin-top: 100px;
-    width: 45%;
-    height: auto;
-}
-.object-3 {
-    margin-top: -300px;;
-    width: 120%;
-    height: auto;
-}
-.object-4 {
-    margin-top: -90px;
-    width: 70%;
-    height: auto;
-}
-
-/* .page-content {
-    position: relative
-} */
 
 .wrapper {
     display: flex;
@@ -97,15 +25,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 .projects{
-    height: 108vh;
+    height: 110vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: -8%;
+    padding-left: 2.5rem;
+    max-width: 100vw;
 }
 
 .project-item {
+    max-width: 100vw;
     display: flex;
     align-self: center;
     font-family: "Oswald", sans-serif;
@@ -116,6 +47,10 @@
     position: relative;
     cursor: pointer;
     margin-left: 3rem;
+    transform: transition 0.75s;
+}
+.project-item:hover{
+    transform: scale(1.05);
 }
 .project-item-title {
     position: relative;
@@ -136,14 +71,15 @@
     right: 0;
     font-weight: 900;
     -webkit-text-stroke: 0.012em white;
-    color: transparent;
+    /* color: transparent; */
     opacity: 0;
     transition: opacity 0.5s ease;
 }
+
 .project-item-hover-image {
     width: auto;
     height: auto;
-    max-width: 50rem;
+    max-width: 40rem;
     /* max-width: 600px; */
     position: absolute;
     top: 0;
@@ -152,25 +88,27 @@
     background-repeat: no-repeat;
     background-position-x: 75%;
     opacity: 0;
-    transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    /* transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1); */
     /* This places the cursor in the center of the image. Divide the width and height by 2 to get the top and left offsets :) */
     margin-left: 40%;
     overflow: hidden;
     pointer-events: none;
     z-index: 2;
     border-radius: 10px;
+    margin-right: 20px;
 }
 .project-item:hover .project-item-hover-image {
     opacity: 1;
 }
 .project-item:hover .project-item-title::after {
     opacity: 1;
-    z-index: 3;
+    z-index: 2;
 }
 
 .buffer{
     height: 20vh;
     width: 100vw;
+    z-index: 0;
 }
 
 .about-me{
@@ -190,12 +128,18 @@
     text-transform: uppercase;
 }
 
-#summary{
+.summary{
     font-size: 2rem;
     font-family: 'Be Vietnam Pro', sans-serif;
     color: rgb(206, 206, 206);
     position: absolute;
     margin-inline: 20%;
+}
+#part1, #part2, #part3{
+    transition: transform 0.75s
+}
+#part1:hover, #part2:hover, #part3:hover{
+    transform: scale(1.2);
 }
 
 footer{
@@ -217,4 +161,50 @@ footer{
 .contact svg{
     margin-inline: 5px;
     margin-bottom: 7px;
+    transition: transform 0.75s;
+}
+.contact svg:hover{
+    transform: scale(1.5);
+}
+
+
+@media only screen and (orientation: portrait) {
+    .project-item img{
+        width: 20rem;
+    }
+
+    .buffer{
+        height: 10vh;
+        width: 100vw;
+    }    
+
+    .summary{
+        font-size: 2rem;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        color: rgb(206, 206, 206);
+        position: absolute;
+        margin-inline: 10%;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 45px;
+        margin-bottom: 10px;
+        width: 100vw;
+        z-index: 3;
+    }
+    .contact{
+        background-color: #0F1839;
+        border-radius: 50px;
+        padding-inline: 15px;
+        margin-bottom: 45px;
+    }
+    .contact svg{
+        margin-inline: 30px;
+        width: 90px;
+        height: 90px;
+    }
 }

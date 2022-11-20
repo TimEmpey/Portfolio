@@ -1,6 +1,8 @@
 import './css/navbar.css';
 import './css/index.css';
 import './css/portfolio.css';
+import './parallax/parallax.css';
+import './parallax/parallax.js';
 
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
@@ -37,8 +39,8 @@ function anim() {
   let zoom = temp > 1 ? temp : 1;
 
   // Only update the Elements scale, when we are below the breakpoint
-  if (zoom < zoomVar_breakpointVar) {
-// Only scale the Image, so the Zoom element does not mess with the document width
+  if (zoom < zoomVar_breakpointVar) { 
+  // Only scale the Image, so the Zoom element does not mess with the document width
     imgElement.style.transform = `scale(${zoom})`;
     // Sets the Elements position to fixed, so it can resize without scrolling away
     zoomElement.style.top = '0px';
@@ -93,3 +95,4 @@ function followImageCursor(event, menuItem) {
 menuItem.addEventListener("mousemove", (event) => {
   setInterval(followImageCursor(event, menuItem), 1000);
 });
+

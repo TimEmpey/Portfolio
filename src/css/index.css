@@ -172,3 +172,10 @@ section {
     transform: rotate(1turn);
   }
 }
+
+@media only screen and (orientation: portrait) {
+  #quote h2{
+    margin-inline: 10%;
+    font-size: 2rem;
+  }
+}
