@@ -28,6 +28,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 .projects{
+    text-decoration: none;
     height: 110vh;
     width: 100vw;
     display: flex;
