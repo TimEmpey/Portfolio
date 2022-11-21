@@ -119,6 +119,7 @@ section {
 #portrait a::after{
   content: "";
   background: white;
+  border-radius: 40px;
 	mix-blend-mode: exclusion;
   width: calc(100% + 20px);
   height: 0;
