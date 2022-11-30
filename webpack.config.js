@@ -29,6 +29,9 @@ module.exports = {
         filename: 'contact',
         template: './src/html/contact.html',
     }),
+    new HtmlWebpackPlugin({
+        favicon: "./src/images/T Empey-logos_black.png"
+    })
     ],
     module: {
     rules: [
