@@ -30,7 +30,7 @@ module.exports = {
         template: './src/html/contact.html',
     }),
     new HtmlWebpackPlugin({
-        favicon: "./src/images/T Empey-logos_black.png"
+        favicon: "./src/images/T Empey-logos.png"
     })
     ],
     module: {
