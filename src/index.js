@@ -13,39 +13,39 @@ document.addEventListener('mousemove', function(e){
 });
 
 document.addEventListener('mousemove', function(e){
-  var x = e.clientX;
-  var y = e.clientY;
-  cursorinner.style.left = x + 'px';
-  cursorinner.style.top = y + 'px';
+    var x = e.clientX;
+    var y = e.clientY;
+    cursorinner.style.left = x + 'px';
+    cursorinner.style.top = y + 'px';
 });
 
 document.addEventListener('mousedown', function(){
-  cursor.classList.add('click');
-  cursorinner.classList.add('cursorinnerhover')
+    cursor.classList.add('click');
+    cursorinner.classList.add('cursorinnerhover')
 });
 
 document.addEventListener('mouseup', function(){
-  cursor.classList.remove('click')
-  cursorinner.classList.remove('cursorinnerhover')
+    cursor.classList.remove('click')
+    cursorinner.classList.remove('cursorinnerhover')
 });
 
 a.forEach(item => {
-  item.addEventListener('mouseover', () => {
+    item.addEventListener('mouseover', () => {
     cursor.classList.add('hover');
-  });
-  item.addEventListener('mouseleave', () => {
+    });
+    item.addEventListener('mouseleave', () => {
     cursor.classList.remove('hover');
-  });
+    });
 })
 
 window.addEventListener("load", () => {
-  const loader = document.querySelector(".loader");
+    const loader = document.querySelector(".loader");
 
-  loader.classList.add("loader-hidden");
+    loader.classList.add("loader-hidden");
 
-  loader.addEventListener("transitionend", () => {
+    loader.addEventListener("transitionend", () => {
     document.body.removeChild("loader");
-  });
+    });
 });
 
 const zoomElement = document.querySelector('.zoom');
@@ -73,39 +73,39 @@ function anim() {
   let zoom = temp > 1 ? temp : 1;
 
   // Only update the Elements scale, when we are below the breakpoint
-  if (zoom < zoomVar_breakpointVar) { 
+    if (zoom < zoomVar_breakpointVar) { 
   // Only scale the Image, so the Zoom element does not mess with the document width
     imgElement.style.transform = `scale(${zoom})`;
     // Sets the Elements position to fixed, so it can resize without scrolling away
     zoomElement.style.top = '0px';
     zoomElement.style.position = 'fixed';
-  } else {
+    } else {
     // Makes sure the Element always reaches Max Size
     imgElement.style.transform = `scale(${zoomVar_breakpointVar})`;
     // Sets the elements position to absolute, so it will scroll with the rest of the document
     zoomElement.style.position = 'absolute';
     zoomElement.style.top = absoluteVar + 'px';
-  }
+    }
 
   // Fade --------------------------------------------------------------------------------------
-  let dif = prev - scroll;
+    let dif = prev - scroll;
 
-  if (zoom < zoomVar_breakpointVar - FADE_SPEED / zoomVar_SPEED) {
+    if (zoom < zoomVar_breakpointVar - FADE_SPEED / zoomVar_SPEED) {
     fade = 1;
-  } else if (zoom > zoomVar_breakpointVar) {
+    } else if (zoom > zoomVar_breakpointVar) {
     fade = 0;
-  } else {
+    } else {
     fade += dif / FADE_SPEED;
-  }
+    }
 
-  fadeElement.style.opacity = fade;
-  prev = scroll;
+    fadeElement.style.opacity = fade;
+    prev = scroll;
   // --------------------------------------------------------------------------------------------
 }
 
 // Resets scroll position on every reload
 if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
+    history.scrollRestoration = 'manual';
 }
 
 document.addEventListener('scroll', () => window.requestAnimationFrame(anim));
@@ -120,14 +120,14 @@ afterZoomElement.style.top = absoluteVar + imageVar_heightVar_MAX / 2 + heightVa
 const menuItem = document.querySelector(".project-item");
 
 function followImageCursor(event, menuItem) {
-  const contentBox = menuItem.getBoundingClientRect();
-  const dx = event.pageX - contentBox.x;
-  const dy = event.pageY - contentBox.y;
-  menuItem.children[1].style.transform = `translate(${dx}px, ${dy}px)`;
+    const contentBox = menuItem.getBoundingClientRect();
+    const dx = event.pageX - contentBox.x;
+    const dy = event.pageY - contentBox.y;
+    menuItem.children[1].style.transform = `translate(${dx}px, ${dy}px)`;
 }
 
 menuItem.addEventListener("mousemove", (event) => {
-  setInterval(followImageCursor(event, menuItem), 1000);
+    setInterval(followImageCursor(event, menuItem), 1000);
 });
 
 // Circle Courser------------------------------------------------------------------------------

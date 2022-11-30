@@ -5,59 +5,59 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 var webpack = require("webpack");
 
 module.exports = {
-  entry: './src/index.js',
-  output: {
+    entry: './src/index.js',
+    output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
-  },
-  devtool: 'eval-source-map',
-  devServer: {               
+    },
+    devtool: 'eval-source-map',
+    devServer: {               
     contentBase: './dist'    
-  },
-  plugins: [
+    },
+    plugins: [
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './src/index.html',
+        filename: 'index.html',
+        template: './src/index.html',
     }),
     new HtmlWebpackPlugin({
-      filename: 'portfolio/index.html',
-      template: './src/html/portfolio.html',
+        filename: 'portfolio/index.html',
+        template: './src/html/portfolio.html',
     }),
     new HtmlWebpackPlugin({
-      filename: 'contact',
-      template: './src/html/contact.html',
+        filename: 'contact',
+        template: './src/html/contact.html',
     })
-  ],
-  module: {
+    ],
+    module: {
     rules: [
-      {
+        {
         test: /\.(gif|png|avif|jpe?g)$/,
         use: [
-          {
+            {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
-              outputPath: '/images/'
+                name: '[name].[ext]',
+                outputPath: 'assets/images/'
             }
-          }
+            }
         ]
-      },
-      {
+        },
+        {
         test:/\.html$/,
         use: [
-          'html-loader'
+            'html-loader'
         ]
-      },
-      
-      {
+        },
+        
+        {
         test: /\.css$/,
         use: [
-          'style-loader',
-          'css-loader'
+            'style-loader',
+            'css-loader'
         ]
-      }
+        }
     ]
-  }
+    }
 };
