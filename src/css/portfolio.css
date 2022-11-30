@@ -1,6 +1,8 @@
 #body{
     margin:0;
     padding:0;
+    padding-top: 5vh;
+    padding-bottom: 30vh;
     z-index: 0;
     background: linear-gradient(to right, #BCA474, #ffffff);
     min-height: 100vh;
@@ -14,7 +16,7 @@
     color: #404040;
 }
 #body .navbar a:hover {
-    background: #ffffff;
+    background: #BCA474;
 }
 
 .wrapper {
@@ -55,12 +57,14 @@
 }
 .project-item:hover{
     transform: scale(1.05);
+    cursor: none;
 }
 .project-item-title {
     position: relative;
     color: #404040;
     -webkit-text-stroke: 0.025em transparent;
     transition: -webkit-text-stroke 0.5s ease, color 0.5s ease;
+    cursor: none;
 }
 .project-item:hover .project-item-title {
     -webkit-text-stroke: none;
@@ -77,6 +81,7 @@
     -webkit-text-stroke: 0.02em #404040;
     opacity: 0;
     transition: opacity 0.5s ease;
+    cursor: none;
 }
 
 .project-item-hover-image {
@@ -163,13 +168,11 @@
     object-fit: cover;
     margin-bottom: 50vh;
     margin-right: 7vw;
-	-webkit-transition: margin 0.5s ease-out;
-    -moz-transition: margin 0.5s ease-out;
-    -o-transition: margin 0.5s ease-out;
 }
 .music img:hover{
 	cursor:pointer;
     margin-top: -35px;
+    cursor: none;
 }
 .music img{
     position: absolute;
@@ -231,6 +234,7 @@ footer{
 
 
 @media only screen and (orientation: portrait) {
+
     #body .navbar{
         border-top: 3px solid rgb(200, 200, 200);
         border-bottom: 3px solid rgb(200, 200, 200);
@@ -252,9 +256,12 @@ footer{
     }
 
     #music-title{
-        position: absolute;
-        margin-top: 330vh;
-        margin-left: 35vw;
+        position: relative;
+        font-size: 2rem;
+        color: #404040;
+        font-family: "Oswald", sans-serif;
+        margin-right: 0vw;
+        margin-bottom: 15vh;
     }
     .damn{
         margin-left: -50%;
@@ -306,4 +313,3 @@ footer{
         height: 90px;
     }
 }
-

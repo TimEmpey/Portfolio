@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   /* background: url('../images/placeholder.jpeg') no-repeat center center fixed; */
-  background: url('../images/placeholder.jpeg') no-repeat center center fixed;
+  background: url('../images/placeholder-two.jpeg') no-repeat center center fixed;
   background-size: cover;
 }
 .zoom {
@@ -21,10 +21,10 @@
   position: absolute;
   /* height: 200vh;  */
   width: 100%;
-  background-color: lightslategray;
   color: black;
   overflow-x: auto;
 }
+
 
 /* Fonts */
 
@@ -42,21 +42,23 @@ html, body, section {
   block-size: 100%;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-}
 
 body {
   margin: 0;
   overflow: scroll;
   z-index: 0;
+  cursor: none;
+}
+
+a{
+    cursor: none;
 }
 
 #name {
   width: 150px;
   height: 100px;
   background-color: black;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 .fade-in-image{
@@ -87,8 +89,7 @@ section {
 }
 
 #filler{
-  height: 115%;
-  background:white;
+  height: 100vh;
 }
 
 #portrait{
@@ -97,16 +98,15 @@ section {
   background-size: cover;
   background-position-x: center;
   background-repeat: no-repeat;
-  border-top: 5px solid #b0b0b0;
-  border-bottom: 5px solid #b0b0b0;
   z-index: 2;
 }
 #portrait h2{
   text-align: center;
-  font-size: 5rem;
+  font-size: 2rem;
   font-family: 'Be Vietnam Pro', sans-serif;
   z-index: 2;
-  color:rgb(69, 75, 116);
+  color:#ffffff;
+  filter: drop-shadow(0 10px 12px #000000);
 }
 #portrait a{
   display: block;
@@ -216,20 +216,49 @@ section {
 }
 
 .contact{
-    background-color: #212E5B;
+    background-color: #ffffff;
     border-radius: 50px;
     padding-inline: 15px;
 }
 
 @media only screen and (orientation: portrait) {
-  #quote h2{
-    margin-inline: 10%;
-    font-size: 2rem;
-  }
-  .contact{
-    background-color: #212E5B;
-    border-radius: 50px;
-    padding-inline: 15px;
-    margin-bottom: 45px;
+
+    #filler{
+        height: 40vh;
+        background:white;
+    }
+    #quote h2{
+        margin-inline: 10%;
+        font-size: 2rem;
+    }
+    .contact{
+        background-color: #ffffff;
+        border-radius: 50px;
+        padding-inline: 15px;
+        margin-bottom: 45px;
+    }
 }
+
+.cursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: black;
+    opacity: 0.3;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 5;
+}
+.hover {
+    background-color: red;
+    opacity: 0.5;
+}
+.cursorinnerhover {
+    width: 50px;
+    height: 50px;
+    opacity: .5;
 }

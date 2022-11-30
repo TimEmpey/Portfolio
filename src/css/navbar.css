@@ -11,51 +11,36 @@ font-family: 'Rubik Mono One', sans-serif;
 */
 
 .navbar {
-  font-family: 'Be Vietnam Pro', serif;
-  overflow: hidden;
-  background-color: #212E5B;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 3;
+    font-family: 'Be Vietnam Pro', serif;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
 }
 .first-nav-item{
     margin-left: 2vw;
 }
 .navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  transform: 0.75s
+    float: left;
+    display: block;
+    color: #404040;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transform: 0.75s
 }
 .navbar a:hover {
-  background: #B9AED6;
-  color: black;
-  transform: scale(1.2);
-  /* border-radius: 50px; */
+    background: #BCA474;
+    transform: scale(1.2);
 }
 
 @media only screen and (orientation: portrait) {
-  .navbar {
-    font-family: 'Be Vietnam Pro', serif;
-    overflow: hidden;
-    background-color: #212E5B;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 3;
-  }
-  .navbar a {
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 45px;
-    text-decoration: none;
-    font-size: 30px;
-  }
+    .navbar a {
+        display: block;
+        padding: 45px;
+        font-size: 30px;
+    }
 }

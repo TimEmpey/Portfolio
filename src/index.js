@@ -4,6 +4,40 @@ import './css/portfolio.css';
 import './parallax/parallax.css';
 import './parallax/parallax.js';
 
+var cursor = document.querySelector('.cursor');
+var cursorinner = document.querySelector('.cursor2');
+var a = document.querySelectorAll('a');
+
+document.addEventListener('mousemove', function(e){
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorinner.style.left = x + 'px';
+  cursorinner.style.top = y + 'px';
+});
+
+document.addEventListener('mousedown', function(){
+  cursor.classList.add('click');
+  cursorinner.classList.add('cursorinnerhover')
+});
+
+document.addEventListener('mouseup', function(){
+  cursor.classList.remove('click')
+  cursorinner.classList.remove('cursorinnerhover')
+});
+
+a.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursor.classList.add('hover');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover');
+  });
+})
+
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
 
@@ -22,7 +56,7 @@ const widthVar = document.body.clientWidth;
 const heightVar = zoomElement.clientHeight;
 const imageVar_widthVar = imgElement.clientWidth;
 const imageVar_heightVar = imgElement.clientHeight;
-const zoomVar_SPEED = 60; // Lower is faster
+const zoomVar_SPEED = 50; // Lower is faster
 const zoomVar_breakpointVar = widthVar / imageVar_widthVar; // When it should stop zooming in
 const imageVar_heightVar_MAX = imageVar_heightVar * zoomVar_breakpointVar;
 const absoluteVar = zoomVar_breakpointVar * zoomVar_SPEED; // Absolute position, when the Element reached maximum size
@@ -96,3 +130,4 @@ menuItem.addEventListener("mousemove", (event) => {
   setInterval(followImageCursor(event, menuItem), 1000);
 });
 
+// Circle Courser------------------------------------------------------------------------------
