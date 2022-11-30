@@ -19,8 +19,11 @@ font-family: 'Rubik Mono One', sans-serif;
   width: 100%;
   z-index: 3;
 }
+.first-nav-item{
+    margin-left: 2vw;
+}
 .navbar a {
-  float: right;
+  float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;

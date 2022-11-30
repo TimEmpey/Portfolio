@@ -7,9 +7,9 @@
 <body>
 <!-----------------Nav Bar--------------------->
     <div class="navbar">
-        <a href="#quote">Quotes</a>
+        <a href="#intro" class="first-nav-item">Intro</a>
         <a href="#portrait">Portfolio</a>
-        <a href="#intro">Intro</a>
+        <a href="#quote">Quotes</a>
     </div>
 <!---------------------------------------------->
     <section id="intro"><br>
@@ -41,7 +41,7 @@
             quoteArray[8] = 'You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose<br> -Dr. Seuss';
             quoteArray[9] = 'Success usually comes to those who are too busy to be looking for it<br> -Henry David Thoreau';
             var i = Math.floor(10*Math.random());
-            document.write('<span style="font-weight: lighter;">' + quoteArray[i] + '</span>');
+            document.write('<br><span class="author" style="font-weight: lighter";>' + quoteArray[i] + '</span>');
         </script>
         </h2>
     </section>

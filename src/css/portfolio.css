@@ -2,17 +2,19 @@
     margin:0;
     padding:0;
     z-index: 0;
-    background: #212E5B;
+    background: #FFFFFF;
     min-height: 100vh;
     max-width: 100vw;
 }
 
 #body .navbar{
-    background-color: #0f1839;
-    border-bottom: 1px solid rgb(200, 200, 200);
+    background-color: #BCA474;
+}
+#body .navbar a{
+    color: #404040;
 }
 #body .navbar a:hover {
-    background: #212E5B;
+    background: #ffffff;
 }
 
 .wrapper {
@@ -58,13 +60,13 @@
 }
 .project-item-title {
     position: relative;
-    color: transparent;
-    -webkit-text-stroke: 0.01em white;
+    color: #BCA474;
+    -webkit-text-stroke: 0.025em #404040;
     transition: -webkit-text-stroke 0.5s ease, color 0.5s ease;
 }
 .project-item:hover .project-item-title {
     -webkit-text-stroke: none;
-    color: white;
+    color: #404040;
 }
 .project-item-title::after {
     content: attr(data-menu-item-text);
@@ -74,7 +76,7 @@
     left: 0;
     right: 0;
     font-weight: 900;
-    -webkit-text-stroke: 0.012em white;
+    -webkit-text-stroke: 0.02em #404040;
     /* color: transparent; */
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -132,7 +134,7 @@
     margin-inline: 0;
     margin-left: 60px;
     font-size: 2rem;
-    color: #ffffff6a;
+    color: #404040;
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
 }
@@ -140,7 +142,7 @@
 .summary{
     font-size: 2rem;
     font-family: 'Be Vietnam Pro', sans-serif;
-    color: rgb(206, 206, 206);
+    color: #404040;
     position: absolute;
     margin-inline: 20%;
     padding-bottom: 1000px;
@@ -155,7 +157,7 @@
 #music-title{
     position: relative;
     font-size: 2rem;
-    color: #ffffff6a;
+    color: #404040;
     font-family: "Oswald", sans-serif;
     margin-right: 0vw;
 }
@@ -217,7 +219,7 @@ footer{
 }
 
 .contact{
-    background-color: #0F1839;
+    background-color: #BCA474;
     border-radius: 50px;
     padding-inline: 15px;
 }
@@ -299,7 +301,7 @@ footer{
         z-index: 3;
     }
     .contact{
-        background-color: #0F1839;
+        background-color: #BCA474;
         border-radius: 50px;
         padding-inline: 15px;
         margin-bottom: 45px;
