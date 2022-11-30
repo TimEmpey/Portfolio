@@ -42,6 +42,9 @@ html, body, section {
   block-size: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
 
 body {
   margin: 0;
