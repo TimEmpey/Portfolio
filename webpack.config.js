@@ -20,7 +20,6 @@ module.exports = {
     new HtmlWebpackPlugin({
         filename: 'index.html',
         template: './src/index.html',
-        favicon: "./src/images/T Empey-logos.png"
     }),
     new HtmlWebpackPlugin({
         filename: 'portfolio/index.html',
