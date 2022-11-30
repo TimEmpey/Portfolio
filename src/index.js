@@ -130,4 +130,5 @@ menuItem.addEventListener("mousemove", (event) => {
     setInterval(followImageCursor(event, menuItem), 1000);
 });
 
-// Circle Courser------------------------------------------------------------------------------
+// Nav Section Highlight------------------------------------------------------------------------------
+
