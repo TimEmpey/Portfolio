@@ -168,42 +168,45 @@
     object-fit: cover;
     margin-bottom: 50vh;
     margin-right: 7vw;
+    z-index: 2;
 }
-.music img:hover{
-	cursor:pointer;
-    margin-top: -35px;
-    cursor: none;
-}
-.music img{
+.cover{
     position: absolute;
     height: 400px;
     width: auto;
+    z-index: 2;
 }
-.damn{
+.cover:hover{
+    cursor:pointer;
+    margin-top: -65px;
+    cursor: none;
+}
+
+.damn, .damn-record{
     margin-left: -20%;
 }
-.nirvana{
+.nirvana, .nirvana-record{
     margin-left: -10%;
 }
-.twisted{
+.twisted, .twisted-record{
     margin-left: 0%;
 }
-.lonerism{
+.lonerism, .lonerism-record{
     margin-left: 10%;
 }
-.tickets{
+.tickets, .tickets-record{
     margin-left: 20%;
 }
-.flower-boy{
+.flower-boy, .flower-boy-record{
     margin-left: 30%;
 }
-.mgmt{
+.mgmt, .mgmt-record{
     margin-left: 40%;
 }
-.pyromania{
+.pyromania, .pyromania-record{
     margin-left: 50%;
 }
-.smithereens{
+.smithereens, .smithereens-record{
     margin-left: 60%;
 }
 
